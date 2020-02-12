@@ -1,34 +1,29 @@
 
 #include <iostream>
 #include "Ordenamiento/Ordenamiento.h"
+#include "Conjunto/Conjunto.h"
 
 int main () {
 
-	int tope = 8;
+	Conjunto* coleccion1 = new Conjunto();
 
-	int* arreglo = new int[tope];
+	coleccion1->altaRecursiva(5);
+	coleccion1->altaRecursiva(1);
+	coleccion1->altaRecursiva(10);
 
-	arreglo[0] = 4;
-	arreglo[1] = 3;
-	arreglo[2] = 1;
-	arreglo[3] = 0;
-	arreglo[4] = 2;
-	arreglo[5] = 5;
-	arreglo[6] = 1;
-	arreglo[7] = 9;
+	std::cout << "Contenido Pre Orden." << std::endl << std::endl;
 
+	coleccion1->mostrarElementosPreOrden();
 
-	std::cout << "ARREGLO ORIGINAL." << std::endl << std::endl;
+	std::cout << "Contenido In Orden." << std::endl << std::endl;
 
-	Ordenamiento::showContent(arreglo, tope);
+	coleccion1->mostrarElementosInOrden();
 
-	Ordenamiento::quickSort(arreglo, 0, 7);
+	std::cout << "Contenido Post Orden." << std::endl << std::endl;
 
-	std::cout << std::endl << "ARREGLO ORDENADO." << std::endl << std::endl;
+	coleccion1->mostrarElementosPostOrden();
 
-	Ordenamiento::showContent(arreglo, tope);
-
-	delete[] arreglo;
+	delete coleccion1;
 
 	return 0;
 }

@@ -7,21 +7,15 @@ int main () {
 
 	Conjunto* coleccion1 = new Conjunto();
 
-	coleccion1->altaRecursiva(5);
-	coleccion1->altaRecursiva(1);
-	coleccion1->altaRecursiva(10);
+	coleccion1->agregar(5);
+	coleccion1->agregar(1);
+	coleccion1->agregar(10);
 
-	std::cout << "Contenido Pre Orden." << std::endl << std::endl;
+	std::cout << "Contenido:" << std::endl << std::endl;
 
-	coleccion1->mostrarElementosPreOrden();
+	coleccion1->mostrarElementos();
 
-	std::cout << "Contenido In Orden." << std::endl << std::endl;
-
-	coleccion1->mostrarElementosInOrden();
-
-	std::cout << "Contenido Post Orden." << std::endl << std::endl;
-
-	coleccion1->mostrarElementosPostOrden();
+	std::cout << "Tamanio: " << coleccion1->obtenerCantidadDeElementos();
 
 	delete coleccion1;
 

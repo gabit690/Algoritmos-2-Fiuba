@@ -82,7 +82,7 @@ class ArbolBinario {
 		 */
 		void mostrarElementosPostOrden();
 
-		/***************************** Metodos de practica. Borrar los que luego no sean utiles
+		///// Metodos de practica. Borrar los que luego no sean utiles
 
 		/*
 		 * PRE: El arbol tiene almacenado al menos un elemento.
